@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="ru">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,
+initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="{{ url_for('static', filename='bootstrap.min.css') }}">
+    <title>
+        {% block title %}
+        Мой сайт
+        {% endblock %}
+    </title>
+</head>
+
+<body> 
+    <div>
+        <a href="/">Основная</a><br>
+        <a href="{{ url_for('task_1') }}">Задача_1</a>
+    </div>
+
+    <div class="container">
+        {% block content %}
+        Страница не заполнена
+        {% endblock %}
+    </div>
+        
+
+        <div class="row fixed-bottom modal-footer">
+            <hr>
+            <p>Все права защищены &copy;</p>
+        </div>
+
+    <script src="{{ url_for('static', filename='bootstrap.bundle.min.js') }}"></script>
+</body>
+
+</html>
